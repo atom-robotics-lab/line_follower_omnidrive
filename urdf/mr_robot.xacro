@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<robot name="mr_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find linef)/urdf/materials.xacro" />
+<xacro:include filename="$(find linef)/urdf/mr_robot.trans" />
+<xacro:include filename="$(find linef)/urdf/mr_robot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.012857500854975256 0.0005455721615347615 0.028824396025250262" rpy="0 0 0"/>
+    <mass value="12.937526815057787"/>
+    <inertia ixx="0.242349" iyy="0.241904" izz="0.46442" ixy="-0.000954" iyz="-3e-05" ixz="0.009783"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="upper_panel_1">
+  <inertial>
+    <origin xyz="-0.16981068116080172 0.18750361570760557 0.0184592808138061" rpy="0 0 0"/>
+    <mass value="7.649753398983407"/>
+    <inertia ixx="0.111429" iyy="0.097265" izz="0.205922" ixy="1.5e-05" iyz="-5e-06" ixz="0.001292"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.187451 0.187549 -0.074" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/upper_panel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.187451 0.187549 -0.074" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/upper_panel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="-0.029999999999996974 -1.7517142134785925e-15 0.02000000000000017" rpy="0 0 0"/>
+    <mass value="1.6955999999999982"/>
+    <inertia ixx="0.001371" iyy="0.000735" izz="0.001653" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.19 0.0 -0.107" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.19 0.0 -0.107" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tyre_l_1">
+  <inertial>
+    <origin xyz="2.3726543324194618e-07 0.06299916512839865 -1.8640587008331155e-07" rpy="0 0 0"/>
+    <mass value="2.070634674921048"/>
+    <inertia ixx="0.002387" iyy="0.003841" izz="0.002387" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001209 -0.056886 -0.018723" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/tyre_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001209 -0.056886 -0.018723" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/tyre_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tyre_r_1">
+  <inertial>
+    <origin xyz="2.3717927835883242e-07 0.03603152317797827 -5.5835582282726115e-08" rpy="0 0 0"/>
+    <mass value="2.070975067332098"/>
+    <inertia ixx="0.00239" iyy="0.003841" izz="0.00239" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000109 0.150886 -0.018723" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/tyre_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000109 0.150886 -0.018723" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://linef/models/robot/tyre_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid_13" type="fixed">
+  <origin xyz="0.187451 -0.187549 0.074" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="upper_panel_1"/>
+</joint>
+
+<joint name="Rigid_31" type="fixed">
+  <origin xyz="0.002549 0.187549 0.033" rpy="0 0 0"/>
+  <parent link="upper_panel_1"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="Revolute_33" type="continuous">
+  <origin xyz="0.001209 0.056886 0.018723" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="tyre_l_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Revolute_34" type="continuous">
+  <origin xyz="0.000109 -0.150886 0.018723" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="tyre_r_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+</robot>

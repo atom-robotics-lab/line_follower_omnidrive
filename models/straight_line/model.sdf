@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="black_line">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <collision name="collision1">
+        <geometry>
+          <mesh>
+            <uri>model://straight_line/meshes/lfr_1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual1">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://straight_line/meshes/lfr_1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+    </link>
+  </model>
+</sdf>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<robot name="mr_robot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="Revolute_33_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_33">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute_33_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute_34_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_34">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute_34_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

@@ -1,0 +1,30 @@
+<launch>
+    <arg name = "paused" default = "false" />
+    <arg name = "gui" default = "true"/>
+    <arg name = "use_sim_time" default = "true"/>
+    <param name="robot_description" command="$(find xacro)/xacro $(find linef)/urdf/mr_robot.xacro"/>
+    <arg name="x_pos" default="0.071782"/> <arg name="y_pos" default="-2.556176"/> <arg name="z_pos" default="0.098317"/> <arg name="Y_pos" default="1.565196"/>
+    <include file = "$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" default="$(find linef)/worlds/square_path.world"/>
+    </include>
+    <include file="$(find linef)/launch/display.launch"/> 
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
+    args="-urdf -model mr_robot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg Y_pos) -param robot_description" />
+</launch>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
