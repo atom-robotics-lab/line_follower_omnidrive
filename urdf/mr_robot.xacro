@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="mr_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find linef)/urdf/materials.xacro" />
-<xacro:include filename="$(find linef)/urdf/mr_robot.trans" />
-<xacro:include filename="$(find linef)/urdf/mr_robot.gazebo" />
+<xacro:include filename="$(find line_follower_omnidrive)/urdf/materials.xacro" />
+<xacro:include filename="$(find line_follower_omnidrive)/urdf/mr_robot.trans" />
+<xacro:include filename="$(find line_follower_omnidrive)/urdf/mr_robot.gazebo" />
 <link name="base_link">
   <inertial>
     <origin xyz="-0.012857500854975256 0.0005455721615347615 0.028824396025250262" rpy="0 0 0"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin xyz="-0.187451 0.187549 -0.074" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/upper_panel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/upper_panel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.187451 0.187549 -0.074" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/upper_panel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/upper_panel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin xyz="-0.19 0.0 -0.107" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/camera_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.19 0.0 -0.107" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/camera_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin xyz="-0.001209 -0.056886 -0.018723" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/tyre_l_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/tyre_l_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.001209 -0.056886 -0.018723" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/tyre_l_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/tyre_l_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin xyz="-0.000109 0.150886 -0.018723" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/tyre_r_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/tyre_r_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.000109 0.150886 -0.018723" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://linef/models/robot/tyre_r_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://line_follower_omnidrive/models/robot/tyre_r_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
