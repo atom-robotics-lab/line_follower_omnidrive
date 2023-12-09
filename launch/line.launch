@@ -1,9 +1,10 @@
 <launch>
+    <env name = "GAZEBO_MODEL_PATH" value = "$(find line_follower_omnidrive)/models"/>
     <arg name = "paused" default = "false" />
     <arg name = "gui" default = "true"/>
     <arg name = "use_sim_time" default = "true"/>
     <param name="robot_description" command="$(find xacro)/xacro $(find line_follower_omnidrive)/urdf/mr_robot.xacro"/>
-    <arg name="x_pos" default="0.071782"/> <arg name="y_pos" default="-2.556176"/> <arg name="z_pos" default="0.098317"/> <arg name="Y_pos" default="1.565196"/>
+    <arg name="x_pos" default="-0.807956"/> <arg name="y_pos" default="-2.291925"/> <arg name="z_pos" default="0.062503"/> <arg name="Y_pos" default="1.570515"/>
     <include file = "$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" default="$(find line_follower_omnidrive)/worlds/straight_line.world"/>
     </include>
@@ -11,18 +12,3 @@
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
      args="-urdf -model mr_robot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg Y_pos) -param robot_description" />
 </launch>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

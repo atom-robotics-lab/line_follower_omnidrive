@@ -203,3 +203,6 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+catkin_add_env_hooks(line_follower_omnidrive_gazebo SHELLS bash DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env_hooks)

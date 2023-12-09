@@ -29,6 +29,10 @@
             </plane>
           </geometry>
           <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
             <friction>
               <ode>
                 <mu>100</mu>
@@ -38,9 +42,6 @@
                 <ode/>
               </torsional>
             </friction>
-            <contact>
-              <ode/>
-            </contact>
             <bounce/>
           </surface>
           <max_contacts>10</max_contacts>
@@ -86,43 +87,14 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <state world_name='default'>
-      <sim_time>217 147000000</sim_time>
-      <real_time>217 992101523</real_time>
-      <wall_time>1701888860 652815830</wall_time>
-      <iterations>217147</iterations>
-      <model name='black_line'>
-        <pose>-0.032327 0.533383 0.041933 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-0.032327 0.533383 0.041933 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ground_plane'>
-        <pose>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose>0 0 10 0 -0 0</pose>
-      </light>
-    </state>
     <model name='black_line'>
-      <pose>-0.034417 0.494522 0 0 -0 0</pose>
+      <pose>-0.811295 0.53751 0 0 -0 0</pose>
       <static>1</static>
       <link name='link'>
-        <collision name='collision1'>
+        <collision name='colision1'>
           <geometry>
             <mesh>
-              <uri>file:///home/diab0lical/test_ws/src/line_follower_omnidrive/models/straight_line/meshes/lfr_1.dae</uri>
+              <uri>model://straight_line/meshes/lfr_1.dae</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -143,7 +115,7 @@
           <cast_shadows>1</cast_shadows>
           <geometry>
             <mesh>
-              <uri>file:///home/diab0lical/test_ws/src/line_follower_omnidrive/models/straight_line/meshes/lfr_1.dae</uri>
+              <uri>model://straight_line/meshes/lfr_1.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -152,9 +124,38 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+    <state world_name='default'>
+      <sim_time>155 55000000</sim_time>
+      <real_time>58 122761862</real_time>
+      <wall_time>1700902817 800800421</wall_time>
+      <iterations>57936</iterations>
+      <model name='black_line'>
+        <pose>-0.811295 0.53751 0.025654 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-0.811295 0.53751 0.025654 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>2.44554 -8.1819 5.17731 0 0.615643 1.79619</pose>
+        <pose>11.0991 0.177954 0.822664 -0 -0.072357 -2.97499</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
