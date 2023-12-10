@@ -5,7 +5,7 @@
     <param name="robot_description" command="$(find xacro)/xacro $(find linef)/urdf/mr_robot.xacro"/>
     <arg name="x_pos" default="0.071782"/> <arg name="y_pos" default="-2.556176"/> <arg name="z_pos" default="0.098317"/> <arg name="Y_pos" default="1.565196"/>
     <include file = "$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" default="$(find linef)/worlds/curve_path.world"/>
+        <arg name="world_name" default="$(find line_follower_omnidrive)/worlds/curve_path.world"/>
     </include>
     <!-- <include file="$(find linef)/launch/display.launch"/> -->
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
