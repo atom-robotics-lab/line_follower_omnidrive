@@ -10,6 +10,7 @@ project(line_follower_omnidrive)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+
 )
 
 ## System dependencies are found with CMake's conventions
@@ -50,6 +51,7 @@ find_package(catkin REQUIRED COMPONENTS
 #   FILES
 #   Message1.msg
 #   Message2.msg
+ 
 # )
 
 ## Generate services in the 'srv' folder
@@ -70,6 +72,7 @@ find_package(catkin REQUIRED COMPONENTS
 # generate_messages(
 #   DEPENDENCIES
 #   std_msgs  # Or other packages containing msgs
+
 # )
 
 ################################################
@@ -106,6 +109,7 @@ catkin_package(
 #  LIBRARIES linef
 #  CATKIN_DEPENDS roscpp rospy
 #  DEPENDS system_lib
+ 
 )
 
 ###########
