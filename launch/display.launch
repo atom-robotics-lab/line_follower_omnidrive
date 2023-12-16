@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find linef)/urdf/mr_robot.xacro'" />    
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find line_follower_omnidrive)/urdf/mr_robot.xacro'" />    
 
     <!-- send fake joint values -->
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
@@ -12,6 +12,6 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
     
     <!-- Show in Rviz   -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find linef)/rviz/mr_robot.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find line_follower_omnidrive)/rviz/mr_robot.rviz"/>
 
 </launch>
