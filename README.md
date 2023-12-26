@@ -1,8 +1,8 @@
-# Line_follower
+# Line_follower_omnidrive
 
-This is line follower robot based on OpenCV(computer vision).  
+This is line follower robot based on OpenCV(computer vision).
 # Introduction
-In this project, we use OpenCV to capture video from the Image sensor on the bot and then process the image by __masking__ the path and drawing __Contour & Momments__ of the masked image. Now in bot_control class we use __P(proportional control)__ to correct the deviation of the bot from the path and publish them into the __/cmd_vel__ topic which helps the bot to take a turn.
+In this project, we find the error between the centroid of the line and the centroid of the robot, and we rotate the robot untill the error is equal to 0.The data is taken from the feedback.py script and using the values provided by feedback.py we provide velocity to cmd_vel node via the controller.py script.
 
 <img src = "https://github.com/atom-robotics-lab/line_follower/blob/main/Assets/work_flow.png" >
 
@@ -24,16 +24,9 @@ Your can refer to [A.T.O.M's wiki](https://atom-robotics-lab.github.io/wiki/setu
 ## Clone the Line Follower package
 Now go ahead and clone this repository inside the "src" folder of the catkin workspace you just created by executing the command given below in your terminal.
 ```bash
-git clone git@github.com:atom-robotics-lab/line_follower
+git clone git@github.com:atom-robotics-lab/line_follower_omnidrive.git
 ```
 
-
-## Clone the MR-Robot package
-This package provide us the bot which we are gonig to use.
-Go inside the "src" folder of the catkin workspace and executing the command given below in your terminal.
-```bash
-git clone git@github.com:atom-robotics-lab/MR-Robot.git
-```
 ### Note:
 
 Now out robot does not have camera in this package so we have to chang branch from main to with_camera.   
@@ -41,7 +34,7 @@ Now then go inside MR-Robot package you just created by executing the above comm
 ```bash
 git checkout with_camera 
 ```
-__Hurray!!! All installation is done__
+__All installation is done__
 
 # Make the package
 We'll need to "make" everything in our catkin workspace so that the ROS environment knows about our new package.  (This will also compile any necessary code in the package). Execute the given commands in your terminal.
@@ -53,23 +46,26 @@ catkin_make
 
 # Launch
 
-__launching world__
+__launching world, use line.launch for line, square.launch for sqaure map and curve.launch for curve map. In this example we will be using the line map__
 
 ```bash
-roslaunch line_follower bot_world.launch
+roslaunch line_follower_omnidrive line.launch
 ```
 The above command when executed in the terminal will launch the gazebo simulation and will also start ROS Master.
 
-<img src = "https://github.com/atom-robotics-lab/line_follower/blob/main/Assets/launch.png" >
+<img src = "https://github.com/atom-robotics-lab/line_follower_omnidrive/bl/Assets/first.png" >
 
 
 __Run script__
 
 ```bash
-rosrun line_follower line2.py
+rosrun line_follower_omnidrive feedback.py
+```
+```bash
+rosrun line_follower_omnidrive controller.py
 ```
 
-The given command will run the controller script which controls the robot's movements.
+The given command will run the feedback and the controller script which controls the robot's movements based on the data provided by the feedback script.
 
 <img src = "https://github.com/atom-robotics-lab/line_follower/blob/main/Assets/line_follower.gif" >
 
