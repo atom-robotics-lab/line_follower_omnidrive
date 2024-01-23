@@ -67,7 +67,7 @@ rosrun line_follower_omnidrive controller.py
 
 The given command will run the feedback and the controller script which controls the robot's movements based on the data provided by the feedback script.
 
-<img src = "https://github.com/atom-robotics-lab/line_follower/blob/main/Assets/line_follower.gif" >
+<img src = "https://github.com/atom-robotics-lab/line_follower_omnidrive/blob/ros/assets/random.gif" >
 
 
 
