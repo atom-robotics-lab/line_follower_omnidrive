@@ -8,7 +8,7 @@
     <include file = "$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" default="$(find line_follower_omnidrive)/worlds/straight_line.world"/>
     </include>
-    <!-- <include file="$(find line_follower_omnidrive)/launch/display.launch"/> -->
+    <include file="$(find line_follower_omnidrive)/launch/display.launch"/>
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
      args="-urdf -model mr_robot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg Y_pos) -param robot_description" />
 </launch>
