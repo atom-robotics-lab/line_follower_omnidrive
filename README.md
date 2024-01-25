@@ -46,14 +46,22 @@ catkin_make
 
 # Launch
 
-__launching world, use line.launch for line, square.launch for sqaure map and curve.launch for curve map. In this example we will be using the line map__
+__launching world, use line.launch for line__
 
 ```bash
 roslaunch line_follower_omnidrive line.launch
 ```
+__for curve__
+```bash
+roslaunch line_follower_omnidrive curve.launch
+```
+__for square__
+```bash
+roslaunch line_follower_omnidrive square.launch
+```
 The above command when executed in the terminal will launch the gazebo simulation and will also start ROS Master.
 
-<img src = "https://github.com/atom-robotics-lab/line_follower_omnidrive/bl/Assets/first.png" >
+<img src = "https://github.com/atom-robotics-lab/line_follower_omnidrive/blob/ros/assets/first.png" >
 
 
 __Run script__
@@ -64,10 +72,12 @@ rosrun line_follower_omnidrive feedback.py
 ```bash
 rosrun line_follower_omnidrive controller.py
 ```
+<img src = "https://github.com/atom-robotics-lab/line_follower_omnidrive/blob/ros/assets/feedback.png">
+<img src = "https://github.com/atom-robotics-lab/line_follower_omnidrive/blob/ros/assets/controller.png">
 
 The given command will run the feedback and the controller script which controls the robot's movements based on the data provided by the feedback script.
 
-<img src = "https://github.com/atom-robotics-lab/line_follower/blob/main/Assets/line_follower.gif" >
+<img src = "https://github.com/atom-robotics-lab/line_follower_omnidrive/blob/ros/assets/random.gif" >
 
 
 
